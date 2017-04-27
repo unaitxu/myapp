@@ -17,7 +17,14 @@ pipeline {
     }
     stage('Test') {
       steps {
-        sh '''rbenv local 2.4.1
+        sh '''#!/bin/bash
+
+export PATH=$PATH:/usr/local/bin:$HOME/.rbenv/bin:$HOME/.rbenv/shims
+
+eval "$(rbenv init -)"
+
+rbenv local 2.4.1
+rbenv rehash
 
 bundle install
 bundle exec rails db:create db:schema:load db:migrate
