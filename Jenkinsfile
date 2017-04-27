@@ -17,14 +17,7 @@ pipeline {
     }
     stage('Test') {
       steps {
-        sh '''#!/bin/bash
-
-export RAILS_ENV=test
-source $HOME/.bashrc
-
-cd .
-
-rbenv local 2.4.1
+        sh '''rbenv local 2.4.1
 
 bundle install
 bundle exec rails db:create db:schema:load db:migrate
