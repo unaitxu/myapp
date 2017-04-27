@@ -21,6 +21,9 @@ pipeline {
 
 export PATH=$PATH:/usr/local/bin:$HOME/.rbenv/bin:$HOME/.rbenv/shims
 
+which rbenv
+which ruby
+
 eval "$(rbenv init -)"
 
 rbenv local 2.4.1
