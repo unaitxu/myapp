@@ -21,6 +21,8 @@ pipeline {
 
 export PATH=$PATH:/usr/local/bin:$HOME/.rbenv/bin:$HOME/.rbenv/shims
 
+whoami
+
 which rbenv
 which ruby
 
