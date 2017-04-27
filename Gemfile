@@ -60,7 +60,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 group :development, :test do
   gem "rspec-rails"
   gem "factory_girl_rails"
-  gem 'ci_reporter_rspec'
 end
 
 group :test do
