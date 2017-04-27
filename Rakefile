@@ -4,7 +4,3 @@
 require_relative 'config/application'
 
 Rails.application.load_tasks
-
-require 'ci/reporter/rake/rspec'
-
-task :rspec => 'ci:setup:rspec'
