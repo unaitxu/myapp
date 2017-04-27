@@ -24,6 +24,8 @@ source $HOME/.bashrc
 
 cd .
 
+rbenv local 2.4.1
+
 bundle install
 bundle exec rails db:create db:schema:load db:migrate
 bundle exec rails test'''
