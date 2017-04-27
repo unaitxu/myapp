@@ -20,6 +20,7 @@ pipeline {
         sh '''#!/bin/bash
 
 export PATH=$PATH:/usr/local/bin:$HOME/.rbenv/bin:$HOME/.rbenv/shims
+export MYAPP_DATABASE_PASSWORD=myapp
 
 whoami
 
