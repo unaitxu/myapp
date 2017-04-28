@@ -44,7 +44,16 @@ bundle exec rake'''
       steps {
         sh '''#!/bin/bash
 
-bundle exec cap production deploy'''
+export PATH=$PATH:/usr/local/bin:$HOME/.rbenv/bin:$HOME/.rbenv/shims
+export MYAPP_DATABASE_PASSWORD=myapp
+
+eval "$(rbenv init -)"
+
+rbenv local 2.4.1
+rbenv rehash
+
+cap production deploy
+'''
       }
     }
     stage('Echo 4') {
