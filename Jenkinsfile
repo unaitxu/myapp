@@ -19,6 +19,8 @@ pipeline {
       steps {
         sh '''#!/bin/bash
 
+sudo su - centos
+
 export PATH=$PATH:/usr/local/bin:$HOME/.rbenv/bin:$HOME/.rbenv/shims
 export MYAPP_DATABASE_PASSWORD=myapp
 
