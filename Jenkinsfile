@@ -21,22 +21,22 @@ pipeline {
 
 sudo su - centos
 
-export PATH=$PATH:/usr/local/bin:$HOME/.rbenv/bin:$HOME/.rbenv/shims
-export MYAPP_DATABASE_PASSWORD=myapp
+sudo su - centos export PATH=$PATH:/usr/local/bin:$HOME/.rbenv/bin:$HOME/.rbenv/shims
+sudo su - centos export MYAPP_DATABASE_PASSWORD=myapp
 
-whoami
+sudo su - centos whoami
 
 which rbenv
 which ruby
 
-eval "$(rbenv init -)"
+sudo su - centos eval "$(rbenv init -)"
 
-rbenv local 2.4.1
-rbenv rehash
+sudo su - centos rbenv local 2.4.1
+sudo su - centos rbenv rehash
 
-bundle install
-bundle exec rails db:create db:schema:load db:migrate
-bundle exec rails test'''
+sudo su - centos bundle install
+sudo su - centos bundle exec rails db:create db:schema:load db:migrate
+sudo su - centos bundle exec rails test'''
       }
     }
     stage('Echo 3') {
