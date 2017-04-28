@@ -32,7 +32,7 @@ rbenv rehash
 
 bundle install
 bundle exec rails db:create db:schema:load db:migrate
-bundle exec rails test'''
+bundle exec rake'''
       }
     }
     stage('Echo 3') {
