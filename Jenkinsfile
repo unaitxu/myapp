@@ -9,7 +9,8 @@ pipeline {
             
           },
           "Rbenv/Ruby": {
-            sh '''which rbenv
+            sh '''source ~/.bash_profile
+which rbenv
 which ruby
 '''
             
